@@ -87,7 +87,7 @@ namespace UoFiddler.Controls.UserControls
             this.insertAtToolStripMenuItem,
             this.insertStartingFromToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 192);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 170);
             // 
             // showFreeSlotsToolStripMenuItem
             // 
@@ -177,7 +177,6 @@ namespace UoFiddler.Controls.UserControls
             // 
             // InsertText
             // 
-            this.InsertText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.InsertText.Name = "InsertText";
             this.InsertText.Size = new System.Drawing.Size(100, 23);
             this.InsertText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownInsert);
@@ -193,7 +192,6 @@ namespace UoFiddler.Controls.UserControls
             // 
             // InsertStartingFromTb
             // 
-            this.InsertStartingFromTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.InsertStartingFromTb.Name = "InsertStartingFromTb";
             this.InsertStartingFromTb.Size = new System.Drawing.Size(100, 23);
             this.InsertStartingFromTb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InsertStartingFrom_OnInsert);
@@ -212,7 +210,7 @@ namespace UoFiddler.Controls.UserControls
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(625, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(733, 25);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -321,9 +319,10 @@ namespace UoFiddler.Controls.UserControls
             this.TextureTileView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TextureTileView.FocusIndex = -1;
             this.TextureTileView.Location = new System.Drawing.Point(0, 25);
+            this.TextureTileView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TextureTileView.MultiSelect = false;
             this.TextureTileView.Name = "TextureTileView";
-            this.TextureTileView.Size = new System.Drawing.Size(625, 303);
+            this.TextureTileView.Size = new System.Drawing.Size(733, 353);
             this.TextureTileView.TabIndex = 5;
             this.TextureTileView.TileBackgroundColor = System.Drawing.SystemColors.Window;
             this.TextureTileView.TileBorderColor = System.Drawing.Color.Gray;
@@ -339,13 +338,14 @@ namespace UoFiddler.Controls.UserControls
             // 
             // TexturesControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TextureTileView);
             this.Controls.Add(this.toolStrip1);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "TexturesControl";
-            this.Size = new System.Drawing.Size(625, 328);
+            this.Size = new System.Drawing.Size(733, 378);
             this.Load += new System.EventHandler(this.OnLoad);
             this.contextMenuStrip1.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);

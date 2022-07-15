@@ -44,6 +44,8 @@ namespace UoFiddler.Controls.UserControls
         {
             this.components = new System.ComponentModel.Container();
             this.LandTilesContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showFreeSlotsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.exportImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asBmpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asTiffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,8 +78,6 @@ namespace UoFiddler.Controls.UserControls
             this.SaveButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.LandTilesTileView = new UoFiddler.Controls.UserControls.TileView.TileViewControl();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.showFreeSlotsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LandTilesContextMenuStrip.SuspendLayout();
             this.LandTilesToolStrip.SuspendLayout();
             this.SuspendLayout();
@@ -98,7 +98,20 @@ namespace UoFiddler.Controls.UserControls
             this.insertAtToolStripMenuItem,
             this.insertStartingFromToolStripMenuItem});
             this.LandTilesContextMenuStrip.Name = "contextMenuStrip1";
-            this.LandTilesContextMenuStrip.Size = new System.Drawing.Size(201, 242);
+            this.LandTilesContextMenuStrip.Size = new System.Drawing.Size(201, 220);
+            // 
+            // showFreeSlotsToolStripMenuItem
+            // 
+            this.showFreeSlotsToolStripMenuItem.CheckOnClick = true;
+            this.showFreeSlotsToolStripMenuItem.Name = "showFreeSlotsToolStripMenuItem";
+            this.showFreeSlotsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.showFreeSlotsToolStripMenuItem.Text = "Show Free Slots";
+            this.showFreeSlotsToolStripMenuItem.Click += new System.EventHandler(this.ShowFreeSlotsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(197, 6);
             // 
             // exportImageToolStripMenuItem
             // 
@@ -194,7 +207,6 @@ namespace UoFiddler.Controls.UserControls
             // 
             // InsertText
             // 
-            this.InsertText.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.InsertText.Name = "InsertText";
             this.InsertText.Size = new System.Drawing.Size(100, 23);
             this.InsertText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownInsert);
@@ -210,7 +222,6 @@ namespace UoFiddler.Controls.UserControls
             // 
             // InsertStartingFromTb
             // 
-            this.InsertStartingFromTb.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.InsertStartingFromTb.Name = "InsertStartingFromTb";
             this.InsertStartingFromTb.Size = new System.Drawing.Size(100, 23);
             this.InsertStartingFromTb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.InsertStartingFromTb_KeyDown);
@@ -231,7 +242,7 @@ namespace UoFiddler.Controls.UserControls
             this.LandTilesToolStrip.Location = new System.Drawing.Point(0, 0);
             this.LandTilesToolStrip.Name = "LandTilesToolStrip";
             this.LandTilesToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.LandTilesToolStrip.Size = new System.Drawing.Size(611, 25);
+            this.LandTilesToolStrip.Size = new System.Drawing.Size(716, 25);
             this.LandTilesToolStrip.TabIndex = 5;
             // 
             // NameLabel
@@ -355,9 +366,10 @@ namespace UoFiddler.Controls.UserControls
             this.LandTilesTileView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LandTilesTileView.FocusIndex = -1;
             this.LandTilesTileView.Location = new System.Drawing.Point(0, 25);
+            this.LandTilesTileView.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.LandTilesTileView.MultiSelect = false;
             this.LandTilesTileView.Name = "LandTilesTileView";
-            this.LandTilesTileView.Size = new System.Drawing.Size(611, 320);
+            this.LandTilesTileView.Size = new System.Drawing.Size(716, 373);
             this.LandTilesTileView.TabIndex = 8;
             this.LandTilesTileView.TileBackgroundColor = System.Drawing.SystemColors.Window;
             this.LandTilesTileView.TileBorderColor = System.Drawing.Color.Gray;
@@ -371,28 +383,16 @@ namespace UoFiddler.Controls.UserControls
             this.LandTilesTileView.ItemSelectionChanged += new System.EventHandler<System.Windows.Forms.ListViewItemSelectionChangedEventArgs>(this.LandTilesTileView_ItemSelectionChanged);
             this.LandTilesTileView.DrawItem += new System.EventHandler<UoFiddler.Controls.UserControls.TileView.TileViewControl.DrawTileListItemEventArgs>(this.LandTilesTileView_DrawItem);
             // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(197, 6);
-            // 
-            // showFreeSlotsToolStripMenuItem
-            // 
-            this.showFreeSlotsToolStripMenuItem.CheckOnClick = true;
-            this.showFreeSlotsToolStripMenuItem.Name = "showFreeSlotsToolStripMenuItem";
-            this.showFreeSlotsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.showFreeSlotsToolStripMenuItem.Text = "Show Free Slots";
-            this.showFreeSlotsToolStripMenuItem.Click += new System.EventHandler(this.ShowFreeSlotsToolStripMenuItem_Click);
-            // 
             // LandTilesControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LandTilesTileView);
             this.Controls.Add(this.LandTilesToolStrip);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "LandTilesControl";
-            this.Size = new System.Drawing.Size(611, 345);
+            this.Size = new System.Drawing.Size(716, 398);
             this.Load += new System.EventHandler(this.OnLoad);
             this.LandTilesContextMenuStrip.ResumeLayout(false);
             this.LandTilesToolStrip.ResumeLayout(false);
